@@ -1,0 +1,24 @@
+* {
+    font-family: "Inika", serif;
+}
+
+header {
+    border-bottom: 1px solid #f4f4f4;
+    height: 50px;
+    padding: 10px 20px;
+}
+
+.header-inner {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1230px;
+}
+
+.header-logo {
+    font-family: 'jsMath-cmti10', serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #f5c800;
+    margin: 0;
+    line-height: 30px;
+}
