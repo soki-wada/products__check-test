@@ -1,0 +1,150 @@
+.products-content{
+    margin: 0 auto;
+    padding: 20px 20px;
+    max-width: 1230px;
+}
+
+.products-pass{
+    display: flex;
+}
+
+.products-index{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    margin: auto 5px;
+    text-decoration: none;
+}
+
+.products-form{
+    width: 100%;
+}
+
+.products-detail{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.products-detail-img-file{
+    width: 45%;
+}
+
+.products-detail-img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+.products-detail-img-button{
+    display: flex;
+}
+
+.products-detail-img-button-select{
+    padding: 5px 10px;
+    border: 1px solid #4b4b4b;
+    background-color: #e0dfde;
+}
+
+.products-detail-input{
+    width: 50%;
+}
+
+.products-detail-input-item{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e0dfde;
+    margin-bottom: 10px;
+}
+
+.products-detail-input-season{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-detail-input-item-label{
+    display: flex;
+}
+
+.products-detail-input-season-item{
+    margin-right: 5px;
+}
+
+.products-description{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.products-description-input{
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #e0dfde;
+    font-size: 14px;
+}
+
+.products-form-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.products-form-button-back{
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.products-form-button-back-item{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #e0dfde;
+    padding: 13px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.products-form-button-update{
+    width: 200px;
+    height: 50px;
+}
+
+.products-form-button-update-submit{
+    width: 100%;
+    height: 100%;
+    padding: 13px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5c800;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.products-form-button-delete{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+}
+
+.products-form-button-delete-submit{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 9px;
+    background: none;
+    cursor: pointer;
+    color: red;
+}

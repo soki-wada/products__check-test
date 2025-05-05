@@ -1,0 +1,141 @@
+.index-content{
+    margin: 0 auto;
+    padding: 20px 20px;
+    max-width: 1230px;
+}
+
+.section-title{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.register-button{
+    display: block;
+    padding: 13px 20px;
+    margin: auto 0;
+    width: 130px;
+    height: 50px;
+    background-color: #ffa929;
+    text-decoration: none;
+    color: #4b4b4b;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.product-display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrapper{
+    width: 20%;
+}
+
+.search-form{
+    width: 100%;
+}
+
+.search-form-wrapper{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.search-form-item{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-form-item-input{
+    width: 100%;
+    padding: 14px 10px;
+    border: 1px solid #e0dfde;
+    border-radius: 25px;
+}
+
+.search-form-button{
+    width: 100%;
+}
+
+.search-form-button-submit{
+    width: 100%;
+    padding: 10px;
+    background-color: #f5c800;
+    border: none;
+    border-radius: 5px;
+}
+
+.sort-form-wrapper{
+    width: 100%;
+    border-bottom: 1px solid #e0dfde;
+    padding-bottom: 20px;
+}
+
+.sort-form{
+    width: 100%;
+}
+
+.sort-form-select-wrapper{
+    width: 100%;
+}
+
+.sort-form-select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0dfde;
+    border-radius: 5px;
+}
+
+.sort-form-select-default{
+    color: #e0dfde;
+}
+
+.product-information-wrapper{
+    width: 75%;
+}
+
+.product-information{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-information-item{
+    display: block;
+    width: 30%;
+    text-decoration: none;
+    margin-bottom: 20px;
+    box-shadow: 0 0 6px #eeeeee;
+    border-radius: 5px;
+}
+
+.product-information-item-img{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+.product-information-item-tag{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0 10px;
+}
+
+.product-information-item-tag-name, .product-information-item-tag-price{
+    color: #4b4b4b;
+}
+
+svg.w-5.h-5 {
+    width: 30px;
+    height: 30px;
+}
+
+.flex{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}

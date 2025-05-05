@@ -17,9 +17,9 @@
         <form action="" class="register-form">
             @csrf
             <p class="register-form-input-title">商品名 <span>必須</span></p>
-            <input type="text" class="register-form-input">
+            <input type="text" class="register-form-input" placeholder="商品名を入力" value="{{old('name')}}">
             <p class="register-form-input-title">値段 <span>必須</span></p>
-            <input type="text" class="register-form-input">
+            <input type="text" class="register-form-input" placeholder="値段を入力" value="{{old('price')}}">
             <p class="register-form-input-title">商品画像 <span>必須</span></p>
             <input type="file" class="register-form-input-file">
             <p class="register-form-input-title">季節 <span>必須</span></p>
@@ -42,13 +42,13 @@
                 </label>
             </div>
             <p class="register-form-input-title">商品説明 <span>必須</span></p>
-            <input type="textarea" class="register-form-input-description">
+            <textarea class="register-form-input-description" placeholder="商品の説明を入力">{{old('description')}}</textarea>
             <div class="register-form-button">
                 <div class="register-form-button-back">
-                    <a href="" class="register-form-button-back-item">戻る</a>
+                    <a href="/products" class="register-form-button-back-item">戻る</a>
                 </div>
                 <div class="register-form-button-create">
-                    <button class="register-form-button-create-item">登録</button>
+                    <button class="register-form-button-create-submit">登録</button>
                 </div>
             </div>
         </form>

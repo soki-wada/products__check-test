@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/register', [ProductController::class, 'register']);
+Route::get('/products/{productId}', [ProductController::class, 'detail']);
+Route::patch('/products/{productId}/update', [ProductController::class, 'update']);
+Route::post('products/search', [ProductController::class, 'search']);
+Route::delete('/products/{productId}/delete', [ProductController::class, 'destroy']);
+
 
 // Route::get('/', function () {
 //     return view('welcome');

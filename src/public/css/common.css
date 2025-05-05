@@ -22,3 +22,7 @@ header {
     margin: 0;
     line-height: 30px;
 }
+
+main{
+    background-color: #f8f8f8;
+}

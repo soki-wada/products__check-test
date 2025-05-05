@@ -1,0 +1,92 @@
+.register-content{
+    margin: 0 auto;
+    padding: 20px 20px;
+    max-width: 50%;
+}
+
+.section-title{
+    margin-bottom: 30px;
+}
+
+.register-form-wrapper{
+    width: 100%;
+}
+
+.register-form{
+    width: 100%;
+}
+
+.register-form-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e0dfde;
+    margin-bottom: 20px;
+}
+
+span{
+    background-color: #fd0707;
+    color: #ffffff;
+    padding: 1px 5px;
+    margin-left: 5px;
+}
+
+.register-form-input-file{
+    padding: 5px 10px;
+    border: 1px solid #4b4b4b;
+    background-color: #e0dfde;
+    margin-bottom: 20px;
+}
+
+.register-form-season{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.register-form-input-description{
+    width: 100%;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.register-form-button{
+    display: flex;
+    justify-content: center;
+}
+
+.register-form-button-back {
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.register-form-button-back-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #e0dfde;
+    padding: 13px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.register-form-button-create {
+    width: 200px;
+    height: 50px;
+}
+
+.register-form-button-create-submit {
+    width: 100%;
+    height: 100%;
+    padding: 13px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5c800;
+    font-weight: bold;
+    cursor: pointer;
+}
