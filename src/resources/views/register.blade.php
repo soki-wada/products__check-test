@@ -35,7 +35,7 @@
             <div class="register-form-season">
                 @foreach($seasons as $season)
                 <label class="register-form-input-label" for="{{$season->id}}">
-                    <input type="checkbox" class="register-form-input-season" id="{{$season->id}}" name="seasons[]" value="{{$season->id}}">
+                    <input type="checkbox" class="register-form-input-season" id="{{$season->id}}" name="seasons[]" value="{{$season->id}}" {{ in_array($season->id, old('seasons', [])) ? 'checked' : '' }}>
                     {{$season->name}}
                 </label>
                 @endforeach
