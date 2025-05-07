@@ -87,7 +87,35 @@
 }
 
 .sort-form-select-default{
-    color: #e0dfde;
+    display: none;
+}
+
+.sort-tag{
+    width: 60%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    border: 1px solid #f5c800;
+    border-radius: 20px;
+}
+
+.sort-tag-text{
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.sort-tag-delete{
+    display: inline-block;
+    text-decoration: none;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    margin: auto;
+    color: #f5c800;
+    border: 1px solid #f5c800;
+    border-radius: 50%;
 }
 
 .product-information-wrapper{

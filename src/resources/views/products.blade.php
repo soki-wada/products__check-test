@@ -14,49 +14,50 @@
         <a href="/products" class="products-index">商品一覧</a>
         <p class="products-name">> {{$product->name}}</p>
     </div>
-    <form action="" class="products-form">
+    <form action="/products/{{$product->id}}/update" class="products-form" enctype="multipart/form-data" method="post">
         @csrf
+        @method('patch')
+        <input type="hidden" name="id" value="{{$product->id}}">
         <div class="products-detail">
             <div class="products-detail-img-file">
                 <div class="products-detail-img">
-                    <img src="{{asset('storage/' . $product->image)}}" alt="{{$product->name}}の画像">
+                    <img src="{{asset('storage/images/' . $product->image)}}" alt="{{$product->name}}の画像">
                 </div>
                 <div class="products-detail-img-button">
-                    <button class="products-detail-img-button-select">
-                        ファイルを選択
-                    </button>
-                    <p class="product-detail-img-file-name"></p>
+                    <input type="file" class="products-detail-img-button-select" name="image">
                 </div>
+                @error('image')
+                <p class="error-message">{{ $message }}</p>
+                @enderror
             </div>
             <div class="products-detail-input">
                 <p class="products-input-title">商品名</p>
-                <input type="text" class="products-detail-input-item" value="{{old('name', $product->name)}}" placeholder="商品名を入力">
+                <input type="text" class="products-detail-input-item" value="{{old('name', $product->name)}}" placeholder="商品名を入力" name="name">
+                @error('name')
+                <p class="error-message">{{ $message }}</p>
+                @enderror
                 <p class="products-input-title">値段</p>
-                <input type="text" class="products-detail-input-item" value="{{old('price', $product->price)}}" placeholder="値段を入力">
+                <input type="text" class="products-detail-input-item" value="{{old('price', $product->price)}}" placeholder="値段を入力" name="price">
+                @error('price')
+                <p class="error-message">{{ $message }}</p>
+                @enderror
                 <p class="products-input-title">季節</p>
                 <div class="products-detail-input-season">
-                    <label class="products-detail-input-item-label" for="spring">
-                        <input type="checkbox" class="products-detail-input-season-item" id="spring" name="season[name]" value="春">
-                        春
+                    @foreach($seasons as $season)
+                    <label class="products-detail-input-item-label" for="{{$season->id}}">
+                        <input type="checkbox" class="products-detail-input-season-item" id="{{$season->id}}" name="seasons[]" value="{{$season->id}}" {{ in_array($season->id, old('seasons', $product->seasons->pluck('id')->toArray())) ? 'checked' : '' }}>
+                        {{$season->name}}
                     </label>
-                    <label class="products-detail-input-item-label" for="summer">
-                        <input type="checkbox" class="products-detail-input-season-item" id="summer" name="season[name]" value="夏">
-                        夏
-                    </label>
-                    <label class="products-detail-input-item-label" for="fall">
-                        <input type="checkbox" class="products-detail-input-season-item" id="fall" name="season[name]" value="秋">
-                        秋
-                    </label>
-                    <label class="products-detail-input-item-label" for="winter">
-                        <input type="checkbox" class="products-detail-input-season-item" id="winter" name="season[name]" value="冬">
-                        冬
-                    </label>
+                    @endforeach
                 </div>
             </div>
         </div>
         <div class="products-description">
             <p class="products-input-title">商品説明</p>
-            <textarea class="products-description-input" placeholder="商品の説明を入力">{{old('description', $product->description)}}</textarea>
+            <textarea class="products-description-input" placeholder="商品の説明を入力" name="description">{{old('description', $product->description)}}</textarea>
+            @error('description')
+            <p class="error-message">{{ $message }}</p>
+            @enderror
         </div>
         <div class="products-form-button">
             <div class="products-form-button-back">
@@ -65,11 +66,16 @@
             <div class="products-form-button-update">
                 <button class="products-form-button-update-submit">変更を保存</button>
             </div>
-            <div class="products-form-button-delete">
-                <button class="products-form-button-delete-submit">
-                🗑️                    
-                </button>
-            </div>
+        </div>
+    </form>
+    <form action="/products/{{$product->id}}/delete" class="products-form-delete" method="post">
+        @csrf
+        @method('delete')
+        <input type="hidden" name="id" value="{{$product->id}}">
+        <div class="products-form-button-delete">
+            <button class="products-form-button-delete-submit">
+                <img src="{{asset('images/icons/delete-icon.png')}}">
+            </button>
         </div>
     </form>
 </div>
